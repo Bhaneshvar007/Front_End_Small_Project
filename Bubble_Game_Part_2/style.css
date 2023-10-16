@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#wraper {
+    background-color: #fde0e0;
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+
+span {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    rotate: -20deg;
+    filter: drop-shadow(2px 2px 8px gray);
+    transition: 1s;
+    animation: scale 5s linear infinite;
+}
+@keyframes scale{
+    0%{
+
+        transform: scale(0.8);
+    }
+ 
+    50%{
+        transform: scale(1.05);
+        left:1%;
+     }
+
+     100%{
+        transform: scale(0.8);
+     }
+}
+
+.container {
+    position: relative;
+    height: 90%;
+    max-height: 50rem;
+    width: 50%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px gray;
+}
+
+.header {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(113, 162, 178);
+    width: 100%;
+    height: 5rem;
+}
+
+.box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.box h1 {
+    font-weight: bold;
+}
+
+.box label {
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    color: #ffff;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 -1px 0px aliceblue, 1px 0px aliceblue;
+}
+
+.buttom-section {
+    position: relative;
+    top: -4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: red;
+
+}
+
+.btm-box {
+    background-color: royalblue;
+    color: #fff;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 20px;
+    background: linear-gradient(20deg, rgb(45, 57, 224), rgb(163, 115, 236), rgb(44, 44, 226));
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 8px gray;
+    cursor: pointer;
+}

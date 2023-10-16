@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1 class="heading">Password Generator</h1>
+        <div class="display-container">
+            <input readonly class="display" placeholder="Password" data-passwordDisplay>
+            <span>
+                <img src="copy btn.png" alt="">
+            </span>
+        </div>
+
+        <div class="input-container">
+            <p class="pas-lan">Password length</p>
+            <span data-Length class="lan">0</span>
+
+            <div>
+                <input type="range" min="1" max="20" class="range" data-LengthSlider>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbol">
+                <label for="range">Include Uppercase latter</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbol">
+                <label for="range">Include Lovercase latter</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbol">
+                <label for="range">Include spacial latter</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbol">
+                <label for="range">Include Number</label>
+            </div>
+
+
+
+            <div class="str-box">
+                <p>Strength</p>
+                <p class="indicator" data-Indicator></p>
+            </div>
+
+            <button id="Pass-Gen">
+                Generate Password
+            </button>
+        </div>
+    </div>
+
+    <script src="pass.js"></script>
+</body>
+
+</html>
