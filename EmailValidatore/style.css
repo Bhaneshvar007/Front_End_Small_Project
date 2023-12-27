@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EmailBox {
+    width: 28%;
+    min-width: 15%;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.526);
+    border-radius: 10px;
+}
+
+.EmailBox input {
+    height: 25%;
+    width: 60%;
+    outline: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    padding: 0 1vw;
+    border-bottom: 3px solid royalblue;
+    color: blue;
+}
+
+input::placeholder{
+    color: blue;
+}
+
+.EmailBox button {
+    height: 25%;
+    width: 20%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+
+@media (max-width:500px) {
+    .EmailBox {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .EmailBox button {
+        width: 25vw;
+    }
+
+}
+
+@media (min-width:500px) and (max-width:800px) {
+
+    .EmailBox {
+        width: 70%;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:800px) and (max-width:1100px) {
+    .EmailBox {
+        width: 40%;
+        flex-direction: column;
+    }
+}
