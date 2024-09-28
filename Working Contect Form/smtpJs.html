@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(4, 4, 60);
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            width: 400px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 1rem 0;
+            border-radius: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.673);
+            outline: none;
+        }
+
+        button {
+            background-color: #ff5361;
+            color: #fff;
+            padding: 10px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            font-size: 18px;
+            width: 180px;
+            border-radius: 5px;
+            margin: 20px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form onsubmit="sendEmail(); return false;">
+            <h1>Contact Form</h1>
+
+            <input type="text" id="name" placeholder="Enter your name..." required>
+            <input type="email" id="email" placeholder="Enter your email..." required>
+            <input type="text" id="phNo" placeholder="Enter your phone number..." required>
+            <textarea rows="5" id="msg" placeholder="Write something here..."></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phNo").value;
+            var message = document.getElementById("msg").value;
+
+            if (name && email && phone && message) {
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "bhanusagar858@gmail.com",
+                    Password: "EFBB499805437F8CBF7AF637AB5F2E01D03D", // इसे कभी public या client-side में न रखें।
+                    To: "sagarabhishek741@gmail.com",
+                    From: email,
+                    Subject: "New Contact Form Enquiry",
+                    Body: `
+                        Name: ${name} <br>
+                        Email: ${email} <br>
+                        Phone No: ${phone} <br>
+                        Message: ${message}
+                    `
+                }).then(
+                    message => alert("Message Sent Successfully")
+                ).catch(
+                    error => alert("Failed to send email. Please try again.")
+                );
+            } else {
+                alert("Please fill all fields.");
+            }
+        }
+    </script>
+</body>
+
+</html>
