@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Mentore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/35f2da27e3.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        .container {
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 100%;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        }
+
+        nav h1 {
+            font-size: 2.8rem;
+            color: rgb(2, 122, 122);
+            margin-top: 5px;
+        }
+
+        nav>h3 {
+            margin-top: -2rem;
+            font-size: 1.5rem;
+            color: #22222298;
+        }
+
+        .navChild {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: -10px;
+        }
+
+        .navChild a {
+            color: rgba(0, 0, 0, 0.774);
+            text-decoration: none;
+            font-size: 1.8rem;
+        }
+
+        .aboutPage {
+            background-color: #93dbb6;
+            margin-top: 11rem;
+        }
+
+        .aboutPage,
+        .event,
+        .ragisterPage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-transform: capitalize;
+            padding: 3rem 0;
+        }
+
+        .aboutPage h1,
+        .event h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .aboutPage p {
+            /* font-size: 1.6rem; */
+            width: 48%;
+            text-align: center;
+        }
+
+        .icons {
+            display: flex;
+            gap: 1rem;
+            margin: 10px 0;
+        }
+
+        .icons i {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #222222b0;
+            transition: all .5s ease;
+        }
+
+        .icons i:hover {
+            color: #222222cb;
+            scale: 1.02;
+        }
+
+        .item-1 {
+            margin-top: -12px;
+            font-size: 1.6rem;
+
+        }
+
+        .item-2 {
+            width: 40%;
+            font-size: 1.6rem;
+
+        }
+
+        .item-3 {
+            font-size: 1.6rem;
+
+            color: #222222b0;
+        }
+
+        .item-4 {
+            margin-top: -1rem;
+            font-size: 1.2rem;
+        }
+
+        .item-5 {
+            font-size: 1.3rem;
+        }
+
+        .event>p {
+            font-size: 2rem;
+            margin-top: -1rem;
+            font-weight: bold;
+            color: #22222298;
+        }
+
+        .eventCir {
+            height: 450px;
+            aspect-ratio: 1/1;
+            background-color: #93dbb6;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 1.3rem;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgb(2, 122, 122);
+
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1>techknights association</h1>
+            <h3>presents</h3>
+            <div class="navChild">
+                <a href="#about">about us</a>
+                <a href="#event">event</a>
+                <a href="#reg">register</a>
+            </div>
+        </nav>
+
+        <div class="aboutPage">
+            <h1>ABOUT US</h1>
+
+            <P class="item-1">Department of computer science and business system presenting international level
+                symposium on 5th
+                october, 2024 "towen gen3"</p>
+
+
+            <p class="item-2">we have planner to conduct technical event as wll as <br> non technical event with
+                exciting prizes!!</p>
+
+            <p class="item-3">techknights association welcomes you <br> to explore a new horizons>></p>
+
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+
+            <p class="item-5"> <i class="fa-solid fa-calendar-days"></i> 05/10/2024</p>
+            <p class="item-4"><i class="fa-solid fa-clock"></i> 9.00am-4.00pm</p>
+        </div>
+
+
+        <div class="event" id="event">
+            <h1>frontend Mentore</h1>
+            <p>unlock an elevate your frontend skills</p>
+
+            <div class="eventCir">
+                <p>"frontend Mentore is an exciting event for developers, where they need to code a given web design
+                    page using html , css , javascript."</p>
+            </div>
+        </div>
+
+
+        <div class="ragisterPage" id="reg">
+            <form action="">
+                <h1>register here :</h1>
+                <p>fill this form</p>
+
+                <label for="name">Name</label>
+                <input type="text" id="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email">
+
+                <label for="num">contect number</label>
+                <input type="number" id="num">
+
+                <label for="clg">collage</label>
+                <input type="text" id="clg">
+
+                <label for="dept">dept</label>
+                <input type="text" id="dept">
+
+                <div>
+                    <label for="year">Year</label>
+                    <input type="radio" name="year" value="1st"> 1st
+                    <input type="radio" name="year" value="2nd"> 2nd
+                    <input type="radio" name="year" value="3rd"> 3rd
+                    <input type="radio" name="year" value="4th"> 4th
+                </div>
+
+                <div>
+                    <label for="gender">gender</label>
+                    <input name="gender" type="radio"> male
+                    <input name="gender" type="radio"> female
+                </div>
+
+                <label for="date">dob</label>
+                <input type="date" id="date">
+
+                <div>
+                    <label for="">skills</label>
+                    <input type="checkbox"> html
+                    <input type="checkbox"> css
+                    <input type="checkbox"> javascript
+                </div>
+
+
+                <label for="textArea">why join this event?</label>
+                <textarea id="textArea" placeholder="Resone for joining this event" role="5"></textarea>
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
